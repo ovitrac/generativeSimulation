@@ -9,9 +9,7 @@
 > The bricks provide a clear context that LLM can follow. Simulations and scenarios can be produced from prompts including specific instructions. Clear examples, reusable classes and operators overcome the current limitations of the considered context window size. 
 
 
-
-<img src="https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/logo.png
-" alt="genrativeSimulation logo" style="zoom:25%;" />
+![genrativeSimulation logo](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/logo.png)
 
 
 
