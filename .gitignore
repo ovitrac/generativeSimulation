@@ -1,0 +1,23 @@
+# Ignore Ruby environment & Bundler artifacts
+.bundle/
+vendor/
+*.gem
+
+# Ignore Jekyll build artifacts
+_site/
+.jekyll-cache/
+.jekyll-metadata/
+.sass-cache/
+
+# Ignore temporary or backup files
+*.log
+*.swp
+*.bak
+*~
+
+# macOS system files
+.DS_Store
+
+# Ignore local custom configuration (optional)
+.env
+
