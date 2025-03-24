@@ -17,8 +17,6 @@ title: Generative Simulation
 
 
 
-
-
 **Some show-cases**
 
 ***
