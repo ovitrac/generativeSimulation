@@ -10,21 +10,23 @@
 
 
 
+<img src="https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/logo.png
+" alt="genrativeSimulation logo" style="zoom:25%;" />
 
 
-**Some show-cases**
+
+### **Some show-cases**
 
 ***
-
 
 
 #### Example 1 | **Pizza**³ | A Multiscale Python Toolkit
 
 **Pizza3** is a toolkit designed to simulate the mechanics of soft matter using **LAMMPS** (Large-scale Atomic/Molecular Massively Parallel Simulator), with fully reusable Python objects that AI can understand and extend. This modular approach simplifies the integration of physics across multiple scales, while abstracting away unnecessary details for large-scale, concurrent simulations running in the cloud.
 
-**Computational resources**: +++
-**Complexity**: ++ 
-**Typical deployment**: HPC, GPU, AWS
+**Computational resources**: +++<br>
+**Complexity**: ++ <br>
+**Typical deployment**: HPC, GPU, AWS<br>
 **Source**: https://github.com/ovitrac/Pizza3
 
 
@@ -37,10 +39,10 @@
 
 **SFPPy** is a high-level Python framework that accelerates the evaluation of the safety of materials in contact with food and related products. Based on mass transfer simulations, the methodology is already recognized by authorities in the EU, US, and China. The tool offers a compact syntax to assess the migration of numerous substances in complex scenarios by automatically connecting to databases, computing mass transfer properties from chemical structures, and simulating migration across all layers of a material. The established methodology is further accelerated through AI-enabled scenario generation, simulation execution, and automated report writing within Jupyter Notebooks.
 
-**Computational resources**: +
-**Complexity**: +
-**Typical deployment**: Standalone, Google Colab, Jupyter Server
-**Typical usage**: Notebooks facilitate record keeping, AI assistance, and automatic coding/reporting
+**Computational resources**: +<br>
+**Complexity**: +<br>
+**Typical deployment**: Standalone, Google Colab, Jupyter Server<br>
+**Typical usage**: Notebooks facilitate record keeping, AI assistance, and automatic coding/reporting<br>
 **Source**: https://github.com/ovitrac/SFPPy
 
 
@@ -53,9 +55,9 @@
 
 **SFPPylite** is a proof of concept that runs the full **SFPPy** framework directly in a browser using WebAssembly technology, without the need for a server or of installing any software. The service supports collaboration and review by regulatory authorities, making it easier to share and validate compliance results. In other words, the end-user can simply copy/paste from/to his preferred chat-bot and have simulations running without any infrastructure and deep knowledge on modeling and simulation.
 
-**Computational resources**: +
-**Complexity**: +
-**Typical deployment**: Web browser (Chrome-based/Firefox)
-**Typical usage**: Self-learning, classroom training, SME use
+**Computational resources**: +<br>
+**Complexity**: +<br>
+**Typical deployment**: Web browser (Chrome-based/Firefox)<br>
+**Typical usage**: Self-learning, classroom training, SME use<br>
 **Source**: https://github.com/ovitrac/SFPPylite
 
