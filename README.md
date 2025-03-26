@@ -6,10 +6,12 @@
 
 ***Generative Simulation** provides modular bricks—representations of physical or conceptual building blocks—that Large Language Models (LLM)  can understand and manipulate to bridge this gap. These bricks can be designed with AI assistance, but the overarching logic, scientific insight, and problem-specific nuance remain in human hands. Once the bricks form a structured language, the subsequent stages of model development, simulation assembly, or code generation can be delegated back to the AI and iteratively refined under human supervision.*
 
-> The bricks provide a clear context that LLM can follow. Simulations and scenarios can be produced from prompts including specific instructions. Clear examples, reusable classes and operators overcome the current limitations of the considered context window size. 
+> The bricks provide a clear context that LLM can follow. Simulations and scenarios can be produced from prompts including specific instructions. Clear examples, reusable classes and operators overcome the current limitations of the considered context window size.
+
+ 
 
 
-![genrativeSimulation logo](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/logo.png)
+![genrativeSimulation logo](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/page2.png)
 
 
 
