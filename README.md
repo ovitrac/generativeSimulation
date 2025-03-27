@@ -11,7 +11,9 @@
  
 
 
-![genrativeSimulation logo](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/page2.png)
+![Illustrative examples from Vitrac work](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/page2.png)
+
+<small>Credits: Olivier Vitrac</small>
 
 
 
