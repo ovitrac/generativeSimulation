@@ -1,5 +1,7 @@
 # 🌱 **What is Generative Simulation**?
 
+---
+
 **Generative Simulation** is an emerging paradigm that develops **advanced numerical simulations using elemental "bricks" accessible to text-generative AI models**. 
 
 🧠 Tools like ChatGPT and its consorts excel at programming across many languages and grasping high-level, macroscopic concepts. However, they cannot seamlessly connect physics, chemistry, biology, and mathematics to solve real-world scientific and engineering problems.
@@ -219,7 +221,7 @@ To scale beyond context limits:
 - **q₁, q₂, ...**: dispatched to **low-latency** or **intensive specialized kernels**, drawing on numerical databases
    The answers **a₀, a₁, a₂, ...** are consolidated by the **LLM Output-Agent**, which builds a structured response and report.
 
-![LFCL proecess](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLprocess.png)
+![LFCL proecess](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLprocess.jpg)
 
 >This architecture ensures reasoning and simulation are balanced, reducing delays and computational cost while preserving scientific rigor and traceability.
 
@@ -371,7 +373,11 @@ Simulated methyl linoleate oxidation. Products include L1OOH, ROO•. See plots.
 
 
 
-# 🧩⚙️🌱 Part 3 | Building Specialized Kernels
+# 🧩🌱 Part 3 | Building Specialized Kernels
+
+
+
+## 3.1 | 💼 What Are Specialized Kernels ?
 
 **Specialized kernels** are domain-specific computational modules that extend the reasoning capabilities of language models into the realm of **quantitative science and engineering**. They are the **physical, chemical, or biological “brains”** of the Language-First Computational Lab (LFCL)—enabling LLMs to **compute, not just communicate**.
 
@@ -383,7 +389,11 @@ Unlike general-purpose LLMs, which rely on linguistic priors, these kernels:
 
 🧠 Through the **LFCL interface**, these kernels are made accessible to LLMs via **semantic hooks and structured prompts**—allowing agents to reason over data, not just text.
 
-![LFCL-based kernels](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLkernels.png)
+![LFCL-based kernels](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLkernels.jpg)
+
+---
+
+## 3.2 | ✅ Kernel Requirements
 
 ---
 
@@ -425,9 +435,49 @@ Unlike general-purpose LLMs, which rely on linguistic priors, these kernels:
 
 ---
 
+## 3.3 | 🍏⏩🍎 SFPPy as a Kernel Example
+
+**SFPPy** is a fully integrated kernel designed for **food contact compliance and risk assessment**. It combines:
+
+- A robust **mass transfer solver**
+- **Molecular and toxicological databases**
+- **Structure-based migration models**
+- A comprehensive **documentation layer**
+- Strong alignment with **EU, US, and Chinese regulatory frameworks**
 
 
-📌 **Want to contribute?** Reach out via GitHub issues or discussions to propose new kernels, interface improvements, or educational use cases!
+
+![SFPPY as a showcase](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/SFPPy.jpg)
+
+
+
+As a kernel in the **LFCL ecosystem**, SFPPy empowers LLMs to interpret and solve **complex regulatory and technological queries** in natural language—spanning:
+
+- Material design & formulation
+- Food type & processing conditions
+- Packaging structure & multi-layer barriers
+- Migration limits & consumer exposure scenarios
+
+⏱️ What would traditionally take **hours of expert interpretation** can now be framed, explored, and **drafted in seconds**, with results that are explainable, traceable, and reproducible.
+
+> Example query:
+>  **"Can you demonstrate that this recycled multilayer material complies with food contact regulations for fatty foods in the EU market after retort processing?"**
+
+Thanks to its structured design and regulatory foundations, SFPPy can simulate such scenarios directly or support them with partial answers, identifying gaps or missing inputs.
+
+
+
+---
+
+
+# 👥👉 Want to contribute?
+
+
+📌 **Want to contribute?** Reach out via GitHub issues or discussions to propose new kernels, interface improvements, or industrial/educational use cases!
+
+
+![call for contributions](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/GSjoin.jpg)
+
 
 
 
