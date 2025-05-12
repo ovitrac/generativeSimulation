@@ -96,7 +96,9 @@ Composable Python bricks:
 - **🔬 Usage**: Food, pharma, cosmetics, polymer stability  
 - **🔗 Source**: [Radigen on GitHub](https://github.com/ovitrac/radigen)
 
+
 ---
+
 
 # 🧪 Part 1 | **Language-First Computational Lab (LFCL) Road Map**
 
@@ -198,7 +200,7 @@ The applications are numerous. Current kernels can already provide answers in se
 
 ---
 
-## 1.6 🪄 Beyond the Language Window
+## 1.6 | 🪄 Beyond the Language Window
 
 To scale beyond context limits:
 
@@ -207,6 +209,23 @@ To scale beyond context limits:
 * Export results as **summarized memory tokens**
 
 ---
+
+## 1.7 | 🌈⃤ Illustrations
+
+**The LFCL architecture enables an engineer or scientist to delegate complex scientific questions to an LLM-powered orchestration system.**
+ Upon receiving a question **Q**, the **LLM Input-Agent** devises a strategy **S** that decomposes Q into sub-questions (**q₀, q₁, q₂, ...**), each routed to an appropriate computational process:
+
+- **q₀**: interpreted through semantic knowledge
+- **q₁, q₂, ...**: dispatched to **low-latency** or **intensive specialized kernels**, drawing on numerical databases
+   The answers **a₀, a₁, a₂, ...** are consolidated by the **LLM Output-Agent**, which builds a structured response and report.
+
+![LFCL proecess](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLprocess.png)
+
+>This architecture ensures reasoning and simulation are balanced, reducing delays and computational cost while preserving scientific rigor and traceability.
+
+
+---
+
 
 # 🧰 Part 2 | **LFCL Architecture (Sketch)**
 
@@ -231,7 +250,7 @@ G --> H["📝 Narrative Summary + Scientific Explanation"]
 
 ---
 
-## 2.2 🗂️ File Structure (Prototype)
+## 2.2 | 🗂️ File Structure (Prototype)
 
 ```bash
 LFCL/
@@ -346,7 +365,67 @@ run_oxidation_simulation(...)
 Simulated methyl linoleate oxidation. Products include L1OOH, ROO•. See plots.
 ```
 
+
+
 ---
+
+
+
+# 🧩⚙️🌱 Part 3 | Building Specialized Kernels
+
+**Specialized kernels** are domain-specific computational modules that extend the reasoning capabilities of language models into the realm of **quantitative science and engineering**. They are the **physical, chemical, or biological “brains”** of the Language-First Computational Lab (LFCL)—enabling LLMs to **compute, not just communicate**.
+
+Unlike general-purpose LLMs, which rely on linguistic priors, these kernels:
+
+- Accept **numerical inputs** (e.g., lab data, physical parameters, boundary conditions)
+- Deliver **quantitative outputs** (e.g., reaction kinetics, migration rates, stress/strain curves)
+- Provide **high precision, traceability, and interpretability** far beyond generic AI reasoning
+
+🧠 Through the **LFCL interface**, these kernels are made accessible to LLMs via **semantic hooks and structured prompts**—allowing agents to reason over data, not just text.
+
+![LFCL-based kernels](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLkernels.png)
+
+---
+
+> ### ⚙️ **Key Requirements for Kernel Design**
+>
+> - Each kernel must implement a **LFCL-compatible interface**, ideally in **Python**, to support both LLM integration and human usage.
+> - Kernel development should be **driven by existing validated scientific methods**—those supported by peer-reviewed literature, regulatory bodies, or industrial standards.
+> - Clear **usage documentation** is mandatory, including:
+>   - Valid domains of application
+>   - Acceptable input/output ranges
+>   - Explicit warnings for extrapolation or domain gaps
+>   - Associated **uncertainty quantification**
+> - The kernel type (⚡ low-latency vs 🧮 intensive) should match:
+>   - The trustworthiness of the method
+>   - The urgency or tier of the decision-making process
+>   - The available computational resources
+> - Wherever possible, **multitiered or progressive strategies** should be used—starting with fast approximations and refining only where necessary.
+
+---
+
+> ### 🔄 **On Interdisciplinarity and Reusability**
+>
+> - Kernels are most powerful when **combined across domains** (e.g., mass transfer + toxicology, or diffusion + reaction mechanics).
+> - LFCL supports both **rough estimators** and **high-fidelity solvers** (e.g., particle-based, mesh-based, Monte Carlo, or thermodynamic integration).
+> - **Registries** should list:
+>   - Method provenance (e.g., peer-reviewed, regulatory, internal R&D)
+>   - Maintenance status and contributors
+>   - Example use cases and known limitations
+> - Open repositories are encouraged to foster **independent validation**, reusability, and collective improvement beyond the LLM ecosystem.
+
+---
+
+> ### 🔁 **From Static Tool to Dynamic Reasoner**
+>
+> LLM agents can chain together **past requests and kernel invocations** to form **new composite simulations**. This enables deeper scenario construction and fosters creative reuses of existing scientific bricks.
+>
+> In essence, LFCL provides **augmented scientific intelligence** for both expert and non-expert users—**amplifying exploration and guiding attention toward meaningful results**. It acts as a catalyst for more robust reasoning, faster hypothesis testing, and greater transparency.
+
+
+---
+
+
 
 📌 **Want to contribute?** Reach out via GitHub issues or discussions to propose new kernels, interface improvements, or educational use cases!
 
