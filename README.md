@@ -55,8 +55,8 @@ Already recognized by EU, US, and Chinese agencies, SFPPy integrates:
 - AI-generated scenarios
 - Jupyter-based documentation and reports
 
-- **💻 Computational resources**: +  
-- **🧠 Complexity**: +  
+- **💻 Computational resources**: +/++  
+- **🧠 Complexity**: ++  
 - **🖥️ Deployment**: Colab, Jupyter Server  
 - **📘 Usage**: Notebooks for modeling, tracking, and AI-assisted reporting  
 - **🔗 Source**: [SFPPy on GitHub](https://github.com/ovitrac/SFPPy)
@@ -73,7 +73,7 @@ Perfect for:
 - 📝 Regulatory collaboration (copy/paste into chatbots or notebooks)
 
 - **💻 Computational resources**: +  
-- **🧠 Complexity**: +  
+- **🧠 Complexity**: ++  
 - **🖥️ Deployment**: Browser (Chrome, Firefox)  
 - **🔗 Source**: [SFPPylite on GitHub](https://github.com/ovitrac/SFPPylite)
 
@@ -92,7 +92,7 @@ Composable Python bricks:
 > 💬 Prompt example:  
 > “Simulate oxidation of linoleic acid for 3 days at 160°C and partial renewal with fresh oil.”
 
-- **💻 Computational resources**: +/++  
+- **💻 Computational resources**: +  
 - **🧠 Complexity**: +/++  
 - **🖥️ Deployment**: Scripts, notebooks, LLM-assisted workflows  
 - **🔬 Usage**: Food, pharma, cosmetics, polymer stability  
