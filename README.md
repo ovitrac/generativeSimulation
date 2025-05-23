@@ -10,7 +10,7 @@
 
 Once the bricks form a structured language, the subsequent stages of model development, simulation assembly, or code generation can be delegated back to the AI and iteratively refined under human supervision.
 
-> 🧩 These bricks provide a clear context that LLMs can follow within their existing context window (from 8K to 128K tokens). **Simulations** and **scenarios** can be produced from prompts including specific instructions. Clear examples, reusable classes, and operators overcome the **limitations of the current window size**.
+> 🧩 These bricks provide a clear context that LLMs can follow within their existing context window (from 8K to 128K tokens). **Simulations** and **scenarios** can be produced from prompts including **specific instructions** and **experimental data** (*e.g.*, chromatograms). Clear examples, reusable classes, and operators overcome the **limitations of the current window size**.
 >
 > 🚧 A prototype demonstrating LFCL orchestration is under development and is drafted in this document.
 
@@ -20,18 +20,98 @@ Once the bricks form a structured language, the subsequent stages of model devel
 
 <small>🎨 Credits: Olivier Vitrac</small>
 
+
+
 ---
 
-## 📦 Some Showcases
+## Table of Contents 
 
-🔧 The **Generative Simulation Ecosystem** already includes powerful computational/multiscale kernels for:
-- ⚙️ Mechanics (e.g., particle-based models, forcefields): large deformations, mechanical rupture, adhesion/melting
-- 💧 Mass Transfer (e.g., Fickian PDEs, molecular diffusivity and sorption estimators)
-- 🔥 Chemical Reactivity (e.g., ODE systems, combinatorial and graph-based networks)
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-> 📚 Each kernel is enriched with embedded domain-specific databases: 🧪 Forcefields, 🧊 Thermodynamic data, 🧬 Transport properties, ⚗️ Reactivity schemes and reaction rate constants, ⌬ chemical databases (e.g., PubChem), ☢️ toxicological databases, ⚖️ legal databases. 
+  - [📦 **Some Showcases**](#-some-showcases)
+    - [🍕 Example 1 | **Pizza³** – A Multiscale Python Toolkit](#-example-1--pizza%C2%B3--a-multiscale-python-toolkit)
+    - [🍽️ Example 2 | **SFPPy** – Compliance & Risk Assessment for Food Contact Materials](#-example-2--sfppy--compliance--risk-assessment-for-food-contact-materials)
+    - [🌐 Example 3 | **SFPPylite** – SFPPy in Your Browser](#-example-3--sfppylite--sfppy-in-your-browser)
+    - [🧪⚛️ Example 4 | **Radigen** – Kernel for Radical Oxidation Mechanisms](#-example-4--radigen--kernel-for-radical-oxidation-mechanisms)
+    - [📡🧬 Example 5 | **sig2dna** – Symbolic Fingerprinting of Analytical Signals](#-example-5--sig2dna--symbolic-fingerprinting-of-analytical-signals)
+- [🧪 Part 1 | **Language-First Computational Lab (LFCL) Road Map**](#-part-1--language-first-computational-lab-lfcl-road-map)
+  - [1.1 | 🌐 Core Philosophy](#11---core-philosophy)
+  - [1.2 | 🧩 Key Components](#12---key-components)
+    - [(A) 🧪 Kernel Ecosystem](#a--kernel-ecosystem)
+    - [(B) 🤖 Language Layer (LLM Agent)](#b--language-layer-llm-agent)
+    - [(C) 🧠 Context Memory](#c--context-memory)
+    - [(D) 👩‍🔬 Human-in-the-Loop Interface](#d--human-in-the-loop-interface)
+  - [1.3 | 🔄 Data & Model Flow](#13---data--model-flow)
+  - [1.4 | 🧑‍💼 Role of the Human Architect](#14---role-of-the-human-architect)
+  - [1.5 | 🔧 Application Scenarios](#15---application-scenarios)
+  - [1.6 | 🪄 Beyond the Language Window](#16---beyond-the-language-window)
+  - [1.7 | 🌈⃤ Illustrations](#17--%E2%83%A4-illustrations)
+- [🧰 Part 2 | **LFCL Architecture (Sketch)**](#-part-2--lfcl-architecture-sketch)
+  - [2.1 | 🔄 Core Conceptual Layers](#21---core-conceptual-layers)
+  - [2.2 | 🗂️ File Structure (Prototype)](#22---file-structure-prototype)
+  - [2.3 | 🔬 `radigen_interface.py`](#23---radigen_interfacepy)
+  - [2.4 | 🧠 `agent.py`](#24---agentpy)
+  - [2.5 | 🧠 `memory.py`](#25---memorypy)
+  - [2.6 | 💻 Notebook/Streamlit Interface](#26---notebookstreamlit-interface)
+  - [2.7 | 🧾 Prompt Template (`templates.md`)](#27---prompt-template-templatesmd)
+- [🧩🌱 Part 3 | Building Specialized Kernels](#-part-3--building-specialized-kernels)
+  - [3.1 | 💼 What Are Specialized Kernels ?](#31---what-are-specialized-kernels-)
+  - [3.2 | ✅ Kernel Requirements](#32---kernel-requirements)
+  - [3.3 | 🍏⏩🍎 SFPPy as a Kernel Example](#33---sfppy-as-a-kernel-example)
+- [👥👉 Want to contribute?](#-want-to-contribute)
 
-🧠 These components are modular and readable by LLMs, enabling simulation-driven reasoning, scenario generation, and iterative refinement through natural language prompts.
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+---
+
+## 📦 **Some Showcases**
+
+🔧 The **Generative Simulation Ecosystem** already includes powerful computational and multiscale kernels for:
+
+- ⚙️ **Mechanics** – particle-based models and forcefields (LAMMPS-compatible): large deformations, rupture, adhesion/melting
+
+- 💧 **Mass Transfer** – diffusion–reaction systems (Fickian PDEs, sorption models, molecular diffusivity estimators)
+
+- 🔥 **Chemical Reactivity** – ODE networks, combinatorial pathway generators, graph-based transformations
+
+- 📡 **Chemical Signal Encoding and Analysis** – symbolic transformation of 1D analytical signals (GC-MS, NMR, FTIR…)
+
+  
+
+> 📚 Each kernel is enriched with embedded **domain-specific knowledge** and scientific databases:
+>
+> -  🧪 **Forcefields** — atomistic, coarse-grained (DPD, SDPD, SPH)
+> -  🧊 **Thermodynamic Data** — solubilities, mixing energies, phase transitions
+> -  🧬 **Transport Properties** — diffusivity, dissolution, activation energy models (Arrhenius, free-volume)
+> -  ⚗️ **Reactivity Schemes** — reaction networks, rate laws, temperature effects
+> -  ⌬ **Chemical Databases** — PubChem integration, CAS handling, identifiers
+> -  ⛓️ **Material Databases** — polymer properties (e.g., $T_g$, density, crystallinity)
+> -  ☢️ **Toxicology Tools** — ToxTree predictions, hazard flags
+> -  ⚖️ **Regulatory Frameworks** — legal thresholds (🇪🇺 EU, 🇺🇸 US, 🇨🇳 China)
+> -  🫆 **Chemical Fingerprints** — symbolic encoding of GC-MS, FTIR, RAMAN, $^1$H-NMR
+>
+> 💡 Many models also integrate **practical factors across the value chain**:
+>
+> -  ♻️ Recycling & decontamination processes for plastics and cellulosic materials
+> -  🧃🥡 Packaging types, geometries, and market statistics
+> -  🥗🍛 Food matrix composition and reactivity
+> -  ♨️🌡️❄️ Food transformation (e.g., deep-frying, pasteurization) and storage
+
+🧠 All components are designed as **modular Python objects readable by LLMs**, enabling **simulation-driven reasoning**, **scenario exploration**, and **code generation** through natural language prompts.
+
+
+
+**Examples Overview**
+
+[![🍕 Pizza³](https://img.shields.io/badge/🍕_Pizza³-mechanics_/_forcefields-8e44ad?style=for-the-badge&labelColor=2c2c2c)](https://github.com/ovitrac/Pizza3)
+[![🍽️ SFPPy](https://img.shields.io/badge/🍽️_SFPPy-food_safety_/_migration-2e7d32?style=for-the-badge&labelColor=1b1b1b)](https://github.com/ovitrac/SFPPy)
+[![🌐 SFPPylite](https://img.shields.io/badge/🌐_SFPPylite-browser_WASM_/_compliance-0288d1?style=for-the-badge&labelColor=1c1c1c)](https://github.com/ovitrac/SFPPylite)
+[![🧪⚛️ Radigen](https://img.shields.io/badge/🧪⚛️_Radigen-radical_oxidation_/_kinetics-e65100?style=for-the-badge&labelColor=2a2a2a)](https://github.com/ovitrac/radigen)
+[![📡🧬 sig2dna](https://img.shields.io/badge/📡🧬_sig2dna-symbolic_signals_/_entropy_/_alignment-6a1b9a?style=for-the-badge&labelColor=1e1e1e)](https://github.com/ovitrac/sig2dna)
+
+
+
 
 ---
 
@@ -79,7 +159,7 @@ Perfect for:
 
 ---
 
-### 🔬 Example 4 | **Radigen** – Kernel for Radical Oxidation Mechanisms
+### 🧪⚛️ Example 4 | **Radigen** – Kernel for Radical Oxidation Mechanisms
 
 **Radigen** simulates radical oxidation in **edible oils**, **biofuels**, and **polymer degradation**. It uses reactive functions, class inheritance, and mechanistic logic to build large-scale reaction networks with thousands of time-dependent species.
 
@@ -97,6 +177,35 @@ Composable Python bricks:
 - **🖥️ Deployment**: Scripts, notebooks, LLM-assisted workflows  
 - **🔬 Usage**: Food, pharma, cosmetics, polymer stability  
 - **🔗 Source**: [Radigen on GitHub](https://github.com/ovitrac/radigen)
+
+
+
+### 📡🧬 Example 5 | **sig2dna** – Symbolic Fingerprinting of Analytical Signals
+
+**sig2dna** transforms complex analytical signals—like **GC-MS**, **NMR**, or **FTIR** outputs—into compact, symbolic **DNA-like sequences** using a multi-scale wavelet encoding approach. These sequences enable **motif recognition**, **signal alignment**, and **unsupervised classification**, unlocking new capabilities for AI-assisted analysis of real-world chemical data.
+
+This symbolic transformation compresses large signals (>95%) while preserving morphological detail. Once encoded, symbolic distances (e.g., **Excess Entropy**, **Jaccard**, **Levenshtein**, **Jensen-Shannon**) allow clustering, outlier detection, and **blind source separation**, even for overlapping or noisy spectra.
+
+**sig2dna** is especially suited for:
+
+- ♻️ NIAS (non-intentionally added substances) fingerprinting in recycled materials
+- 🧪 Quality control in chemical, food, or cosmetic analysis
+- 🤖 LLM-based workflows that search or cluster chemical patterns from symbolic codes
+
+> 💬 Prompt example:
+>  “Classify this mixture of GC-MS signals using entropy distance and extract all motifs matching `YAZB`.”
+
+- **💻 Computational resources**: +
+
+- **🧠 Complexity**: ++
+
+- **🖥️ Deployment**: Python scripts, Colab, Jupyter
+
+- **📊 Usage**: Signal classification, clustering, fingerprinting, AI-assisted interpretation
+
+- **🔗 Source**: [sig2dna on GitHub](https://github.com/ovitrac/sig2dna)
+
+  
 
 
 ---
@@ -222,6 +331,8 @@ To scale beyond context limits:
    The answers **a₀, a₁, a₂, ...** are consolidated by the **LLM Output-Agent**, which builds a structured response and report.
 
 ![LFCL proecess](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLprocess.jpg)
+
+<small>🎨 Credits: Olivier Vitrac</small>
 
 >This architecture ensures reasoning and simulation are balanced, reducing delays and computational cost while preserving scientific rigor and traceability.
 
@@ -391,6 +502,8 @@ Unlike general-purpose LLMs, which rely on linguistic priors, these kernels:
 
 ![LFCL-based kernels](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/LFCLkernels.jpg)
 
+<small>🎨 Credits: Olivier Vitrac</small>
+
 ---
 
 ## 3.2 | ✅ Kernel Requirements
@@ -449,6 +562,8 @@ Unlike general-purpose LLMs, which rely on linguistic priors, these kernels:
 
 ![SFPPY as a showcase](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/SFPPy.jpg)
 
+<small>🎨 Credits: Olivier Vitrac</small>
+
 
 
 As a kernel in the **LFCL ecosystem**, SFPPy empowers LLMs to interpret and solve **complex regulatory and technological queries** in natural language—spanning:
@@ -478,7 +593,7 @@ Thanks to its structured design and regulatory foundations, SFPPy can simulate s
 
 ![call for contributions](https://raw.githubusercontent.com/ovitrac/generativeSimulation/main/assets/GSjoin.jpg)
 
-
+<small>🎨 Credits: Olivier Vitrac</small>
 
 
 [olivier.vitrac@gmail.com]([olivier.vitrac@gmail.com]) | May 2025
