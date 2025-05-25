@@ -178,7 +178,7 @@ Composable Python bricks:
 - **🔬 Usage**: Food, pharma, cosmetics, polymer stability  
 - **🔗 Source**: [Radigen on GitHub](https://github.com/ovitrac/radigen)
 
-
+---
 
 ### 📡🧬 Example 5 | **sig2dna** – Symbolic Fingerprinting of Analytical Signals
 
