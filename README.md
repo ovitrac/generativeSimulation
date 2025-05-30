@@ -583,6 +583,8 @@ Thanks to its structured design and regulatory foundations, SFPPy can simulate s
 
 
 
+---
+
 # 🤖 Part 4 | GS-Agents & the GSHub Initiative
 
 As Generative Simulation evolves, it becomes increasingly important to bridge natural language interaction with composable scientific kernels. **GS-Agents** are intelligent interfaces designed to do exactly that: they interpret scientific questions, invoke simulation kernels, and archive their reasoning paths.
