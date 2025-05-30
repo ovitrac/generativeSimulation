@@ -2,7 +2,7 @@
 
 ---
 
-**Generative Simulation** is an emerging paradigm that develops **advanced numerical simulations using elemental "bricks" accessible to text-generative AI models**. 
+**Generative Simulation** (<kbd>GS</kbd>) is an emerging paradigm that develops **advanced numerical simulations using elemental "bricks" accessible to text-generative AI models** and <kbd>GS</kbd>**-agents**. Learn more on <kbd>GS</kbd>**-agents** on [GS-Hub project](https://github.com/ovitrac/GSHub). 
 
 🧠 Tools like ChatGPT and its consorts excel at programming across many languages and grasping high-level, macroscopic concepts. However, they cannot seamlessly connect physics, chemistry, biology, and mathematics to solve real-world scientific and engineering problems.
 
@@ -59,6 +59,7 @@ Once the bricks form a structured language, the subsequent stages of model devel
   - [3.1 | 💼 What Are Specialized Kernels ?](#31---what-are-specialized-kernels-)
   - [3.2 | ✅ Kernel Requirements](#32---kernel-requirements)
   - [3.3 | 🍏⏩🍎 SFPPy as a Kernel Example](#33---sfppy-as-a-kernel-example)
+- [🤖 Part 4 | GS-Agents & the GSHub Initiative](#-part-4--gs-agents--the-gshub-initiative)
 - [👥👉 Want to contribute?](#-want-to-contribute)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -579,6 +580,20 @@ As a kernel in the **LFCL ecosystem**, SFPPy empowers LLMs to interpret and solv
 >  **"Can you demonstrate that this recycled multilayer material complies with food contact regulations for fatty foods in the EU market after retort processing?"**
 
 Thanks to its structured design and regulatory foundations, SFPPy can simulate such scenarios directly or support them with partial answers, identifying gaps or missing inputs.
+
+
+
+# 🤖 Part 4 | GS-Agents & the GSHub Initiative
+
+As Generative Simulation evolves, it becomes increasingly important to bridge natural language interaction with composable scientific kernels. **GS-Agents** are intelligent interfaces designed to do exactly that: they interpret scientific questions, invoke simulation kernels, and archive their reasoning paths.
+
+The companion project, **[GSHub](https://github.com/ovitrac/GSHub)**, provides the open infrastructure for these agents. It includes:
+
+- A registry of interoperable kernels (e.g., `radigen`, `SFPPy`, `sig2dna`)
+- A memory system for storing prompt–response–result chains
+- Tools for problem submission, review, and collaborative refinement
+
+📬 Visit **[GSHub](https://github.com/ovitrac/GSHub)** to explore how GS-Agents create a persistent, modular, and evolving form of machine–human reasoning. Contributions and forks welcome.
 
 
 
