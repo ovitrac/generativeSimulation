@@ -1,6 +1,6 @@
 # 🌱 **What is Generative Simulation**?
 
-<a href="https://github.com/ovitrac/generativeSimulation" title="Detailed description of the Generative Simulation Initiative" target="_blank">
+<a href="https://deepwiki.com/ovitrac/generativeSimulation" title="Detailed description of the Generative Simulation Initiative" target="_blank">
 
   <picture>
     <source media="(prefers-color-scheme: dark)"
