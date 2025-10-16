@@ -1,6 +1,16 @@
 # 🌱 **What is Generative Simulation**?
 
----
+<a href="https://github.com/ovitrac/generativeSimulation" title="Detailed description of the Generative Simulation Initiative" target="_blank">
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+            srcset="https://img.shields.io/badge/DeepWiki-Generative%20Simulation-1f6feb?style=flat&logo=bookstack&logoColor=white&labelColor=0d1117">
+    <source media="(prefers-color-scheme: light)"
+            srcset="https://img.shields.io/badge/DeepWiki-Generative%20Simulation-0969da?style=flat&logo=bookstack&logoColor=white&labelColor=f6f8fa">
+    <img alt="DeepWiki: Generative Simulation"
+         src="https://img.shields.io/badge/DeepWiki-Generative%20Simulation-0969da?style=flat&logo=bookstack&logoColor=white">
+  </picture>
+</a>
 
 **Generative Simulation** (<kbd>GS</kbd>) is an emerging paradigm that develops **advanced numerical simulations using elemental "bricks" accessible to text-generative AI models** and <kbd>GS</kbd>**-agents**. Learn more on <kbd>GS</kbd>**-agents** on [GS-Hub project](https://github.com/ovitrac/GSHub). 
 
